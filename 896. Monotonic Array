@@ -1,0 +1,51 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{   
+    int size;
+    cout<<"Enter the size of the array 'nums'\t";
+    cin>>size;
+    int nums[size];
+    for(int i = 0; i < size; i++)
+    {
+        cin>>nums[i];
+    }
+    int counter1=0,counter2=0;
+    for(int i = 0; i < size-1; i++)
+    {
+        
+        if(nums[i] <= nums[i+1])
+        {
+            counter1++;
+        }
+        if(nums[i] >= nums[i+1])
+        {
+            counter2++;
+        }
+    }
+    if(counter1 == size-1)
+        {
+            /*cout<<counter1;
+            cout<<counter2;
+            cout<<"monotonically increasing";*/
+            cout<<"\noutput = True";
+        }
+        else if(counter2 == size-1)
+        {
+            /*cout<<counter1;
+            cout<<counter2;
+            cout<<"monotonically decreasing";*/
+            cout<<"\noutput = True";
+        }
+        else 
+        {
+            /*cout<<counter1;
+            cout<<counter2;
+            cout<<"array is not monotonic";*/
+            cout<<"\noutput = False";
+        }
+    return 0;
+
+}
