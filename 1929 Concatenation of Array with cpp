@@ -1,0 +1,30 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Enter the size of the array 'nums'\t";
+    cin>>n;
+    int nums[n];
+    int ans[2*n];
+        for(int i = 0; i < n ; i++)
+            {
+                cout<<"\nEnter element in nums array";
+                cin>>nums[i];
+                ans[i] = nums[i];
+                ans[i+n] = nums[i];
+            }
+    cout<<"\nans = [";
+        for(int i = 0; i < 2*n ;i++)
+            {
+                cout<<ans[i];
+                if(i < 2*n-1)
+                {
+                    cout<<",";
+                }
+            }
+    cout<<"]";
+    return 0;
+}
