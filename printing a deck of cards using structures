@@ -1,0 +1,152 @@
+#include<iostream>
+
+using namespace std;
+
+struct card
+{
+    int facevalue;
+    int color;
+    //(colors follow black & red in 0,1 respectively)
+    int shape;
+    //(shapes follow spade,hearts,clubs&diamonds in 0,1,2,3 respectively)
+}; //deck[52];
+int main()
+{
+    struct card deck[52];
+    deck[0] = {1,1,0};
+    cout<<sizeof(deck[0]);
+    for(int i = 0; i < 13; i++)    //spades
+    {
+        deck[i].facevalue = i+1;
+        deck[i].color = 0;
+        deck[i].shape = 0;
+    }
+    for(int i = 0; i < 13; i++)    //hearts
+    {
+        deck[i+13].facevalue = i+1;
+        deck[i+13].color = 1;
+        deck[i+13].shape = 1;
+    }
+    for(int i = 0; i < 13; i++)     //clubs
+    {
+        deck[i+26].facevalue = i+1;
+        deck[i+26].color = 0;
+        deck[i+26].shape = 2;
+    }
+    for(int i = 0; i < 13;i++)      //diamonds
+    {
+        deck[i+39].facevalue = i+1;
+        deck[i+39].color = 1;
+        deck[i+39].shape = 3;
+    }
+   // cout<<"\n"<<deck[0].facevalue<<","<<deck[0].color<<","<<deck[0].shape<<"\tspades"<<endl;
+   // cout<<"\n"<<deck[17].facevalue<<","<<deck[17].color<<","<<deck[17].shape<<"\thearts"<<endl;
+    //cout<<"\n"<<deck[33].facevalue<<","<<deck[33].color<<","<<deck[33].shape<<"\tclubs"<<endl;
+    //cout<<"\n"<<deck[46].facevalue<<","<<deck[46].color<<","<<deck[46].shape<<"\tdiamonds"<<endl;
+    
+    for(int i = 0; i < 52; i++)
+    {
+        if(deck[i].shape == 0)
+        {
+            if(deck[i].facevalue == 1)
+            {
+                cout<<"\nAce Of Spades"<<endl;
+            }
+            else if(deck[i].facevalue == 11)
+            {
+                cout<<"\nJack Of Spades"<<endl;
+            }
+            else if(deck[i].facevalue == 12)
+            {
+                cout<<"\nQueen Of Spades"<<endl;
+            }
+            else if(deck[i].facevalue == 13)
+            {
+                cout<<"\nKing Of Spades"<<endl;
+            }
+            else
+            {
+                cout<<"\n"<<deck[i].facevalue;
+                cout<<" Of Spades"<<endl;
+            }
+        }
+        else if(deck[i].shape == 1)
+        {
+            if(deck[i].facevalue == 1)
+            {
+                cout<<"\nAce Of Hearts"<<endl;
+            }
+            else if(deck[i].facevalue == 11)
+            {
+                cout<<"\nJack Of Hearts"<<endl;
+            }
+            else if(deck[i].facevalue == 12)
+            {
+                cout<<"\nQueen Of Hearts"<<endl;
+            }
+            else if(deck[i].facevalue == 13)
+            {
+                cout<<"\nKing Of Hearts"<<endl;
+            }
+            else
+            {
+                cout<<"\n"<<deck[i].facevalue;
+                cout<<" Of Hearts"<<endl;
+            }
+            
+        }
+        else if(deck[i].shape == 2)
+        {
+            if(deck[i].facevalue == 1)
+            {
+                cout<<"\nAce Of Clubs"<<endl;
+            }
+            else if(deck[i].facevalue == 11)
+            {
+                cout<<"\nJack Of Clubs"<<endl;
+            }
+            else if(deck[i].facevalue == 12)
+            {
+                cout<<"\nQueen Of Clubs"<<endl;
+            }
+            else if(deck[i].facevalue == 13)
+            {
+                cout<<"\nKing Of Clubs"<<endl;
+            }
+            else
+            {
+                cout<<"\n"<<deck[i].facevalue;
+                cout<<" Of Clubs"<<endl;
+            }
+            
+        }
+        else if(deck[i].shape == 3)
+        {
+            if(deck[i].facevalue == 1)
+            {
+                cout<<"\nAce Of Diamonds"<<endl;
+            }
+            else if(deck[i].facevalue == 11)
+            {
+                cout<<"\nJack Of Diamonds"<<endl;
+            }
+            else if(deck[i].facevalue == 12)
+            {
+                cout<<"\nQueen Of Diamonds"<<endl;
+            }
+            else if(deck[i].facevalue == 13)
+            {
+                cout<<"\nKing Of Diamonds"<<endl;
+            }
+            else
+            {
+                cout<<"\n"<<deck[i].facevalue;
+                cout<<" Of Diamonds"<<endl;
+            }
+            
+        }
+        //cout<<"\t"<<deck[i].shape;
+    }   
+    //cout<<"\nhellow";
+    return 0;
+}
