@@ -1,0 +1,31 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int a;
+    
+    int b;
+    cout<<"\nEnter B = ";
+    cin>>b;
+    int *p1;
+    p1 = &b;
+
+    int c;
+    cout<<"\nEnter C = ";
+    cin>>c;
+    int *p2;
+    p2 = &c;
+
+    a = b + c;
+    
+    int *p;
+    p = &a;
+
+    cout<<*p<<endl;
+    cout<<p<<endl;
+
+    cout<<"Addition is "<<a;
+    return 0;
+}
