@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int seasons;
+    cin>>seasons;
+    int array[seasons];
+    for(int i = 0;i<seasons;i++)
+    {
+        cin>>array[i];
+    }
+    int min = array[0],max=array[0];
+    int minc = 0,maxc = 0;
+    for(int i = 1;i<seasons;i++)
+    {
+        if(max < array[i])
+        {
+            maxc++;
+            max = array[i];
+        }
+        else
+        {
+            cout<<maxc<<"\n";
+        }
+        if(min > array[i])
+        {
+            minc++;
+            min = array[i];
+        }
+        else
+        {
+            cout<<minc<<"\n";
+        }
+    }
+    cout<<maxc<<"\t"<<minc;
+	return 0;
+}
