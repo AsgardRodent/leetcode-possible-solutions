@@ -1,0 +1,48 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int row,columns;
+    cout<<"\nEnter the number of rows & columns";
+    cin>>row>>columns;
+    int array[row][columns];
+    cout<<"\nEnter numbers in array(row wise)";
+    for(int i=0;i<row;i++)
+    {
+        for(int j=0;j<columns;j++)
+        {
+            cin>>array[i][j];
+        }
+    }
+    cout<<"entered array is\n";
+    for(int i=0;i<row;i++)
+    {
+        for(int j=0;j<columns;j++)
+        {
+           cout<<array[i][j]<<"\t";
+        }
+        cout<<"\n";
+    }
+    //transpose
+    int count = 0;
+    do
+    {
+        for(int i = 0;i < row;i++)
+        {
+         cout<<array[i][count]<<"\t";
+        }
+    cout<<"\n";    
+    count++;
+    }while(count!=columns);
+    return 0;
+}
