@@ -1,0 +1,55 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    //calc
+    int a,b;
+    cout<<"Enter two numbers\n";
+    cin>>a>>b;
+    char op;
+    int opans;
+    char choice;
+    do
+    {
+      cout<<"what operation would you like to do\t";
+      cin>>op;
+        switch(op)
+        {
+            case '+': 
+                opans=a+b;
+                cout<<"\n"<<opans;
+                break;
+            case '-': 
+                opans=a-b;
+                if(opans>0)
+                {
+                    cout<<"\n"<<opans;
+                    break;
+                }
+                else
+                {
+                    cout<<"\n"<<opans;
+                    break;
+                }
+            case '/': 
+                opans=a/b;
+                cout<<"\n"<<opans;
+                break;
+            case '*': 
+                opans=a*b;
+                cout<<"\n"<<opans;
+                break;
+            case '%': 
+                opans=a%b;
+                cout<<"\n"<<opans;
+                break;
+            default:
+                cout<<"Dont know that :D\n";
+                break;
+        }
+        cout<<"\nwould you like to try something again\t";
+        cin>>choice;
+    }while(choice == 'y' || choice == 'Y');  
+    
+}
