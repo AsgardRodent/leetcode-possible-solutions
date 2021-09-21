@@ -1,0 +1,48 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+bool pytotrp(int a,int b,int c)
+{
+    int m,n,o;
+    m = max(a, max(b,c));
+    if(m == a)
+    {
+        n = b;
+        o = c;
+    }
+    else if(m == b)
+    {
+        n = a;
+        o = c;
+    }
+    else
+    {
+        n = a;
+        o = b;
+    }
+    m *= m;
+    n *= n;
+    o *= o;
+    if(m == n + o)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+int main()
+{
+    int a,b,c;
+    cout<<"Enter 3 numbers :";
+    cin>>a>>b>>c;
+    if(pytotrp(a,b,c) == true)
+    {
+        cout<<a<<" "<<b<<" "<<c<<" "<<"are pythogorian triplets";
+    }
+    else
+    {
+        cout<<a<<" "<<b<<" "<<c<<" "<<"are not pythogorain triplets";
+    }
+}
